@@ -1,0 +1,78 @@
+{% extends 'base/base.html'%}
+
+
+{% block  estilo %}
+<style type="text/css">
+body
+       {
+        background-color:white;
+        
+       }
+
+       
+      .perças{
+        color: black;
+      }
+
+</style>
+
+{% endblock%}
+
+{% block conteudo%}
+<div class="container-fluid">
+    <div class="body">
+    <h3 class="perças">PERÇAS DE MOTO</h3><br><br>
+    <div class="col-12">
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+
+   <div class="row mt-5"></div>
+    <div class="card-body">
+        <table class="table table-success table-striped">
+            <tr>
+                <th>perças</th>
+                <th>codigo</th>
+                <th>Estoque</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td>pastilhas de freios</td>
+                <td>00001</td>
+                <td>09</td>
+                <td><a href="#" class="btn btn-success">Estoque<br></a></td>
+            </tr>
+            <tr>
+                <td>velas de ignição</td>
+                <td>203000</td>
+                <td>50</td>
+                <td><a href="#" class="btn btn-success">Estoque<br></a></td>
+            </tr>
+            <tr>
+                <td>corrente</td>
+                <td>12400</td>
+                <td>50</td>
+                <td><a href="#" class="btn btn-success">Estoque<br></a></td>
+            </tr>
+            <tr>
+                <td>bateria</td>
+                <td>23030</td>
+                <td>4</td>
+                <td><a href="#" class="btn btn-success">Estoque<br></a></td>
+            </tr>
+
+            <tr>
+                <td>Pneus</td>
+                <td>330</td>
+                <td>0</td>
+                <td><a href="#" class="btn btn-danger">Em falta<br></a></td>
+            </tr>
+          </table>
+        </div>
+    </div>
+</div><br><br><br><br>
+
+
+
+{% endblock %}

@@ -1,0 +1,84 @@
+
+<style type="text/css">
+     * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            list-style: none;
+            font-family: 'poppins', sans-serif;
+        }
+
+        .main {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            text-align: center;
+        }
+
+        .menu {
+            width: 20%;
+            background-color: #121227;
+        }
+
+        #logo {
+            color: #fff;
+            font-size: 30px;
+            letter-spacing: 4px;
+            padding: 15px;
+            background-color: black;
+
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            letter-spacing: 2px;
+            display: list-item;
+            padding: 20px;
+            border-top: 1px solid #0093E9;
+            border-bottom: 1px solid #0093E9;
+        }
+
+        .menu a:hover {
+            background-color: rgb(255, 149, 0);
+            transition: 0.5s;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .sair {
+            
+            background-color: red;
+            transition: 0.5s;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .button {
+            
+            color: #0093E9;
+        }
+
+        .body{
+            background-color: #F8F8FF;
+        }
+        .cor
+        {
+            color: #0093E9;
+        }
+
+</style>
+
+
+<div class="main">
+    <div class="menu fixed">
+        <h2 id="logo">OFICINA GEOVANE</h2>
+        <a href="{% url 'adiministrador' %}">home</a>
+        <a href="#">Desepenho</a>
+        <a href="">autenticação de usuario</a>
+        <a href="#">booking</a>
+        <a href="#">news</a>
+        <a href="#">cadastrar perças</a><br><br><br><br>
+        
+    </div>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adimin</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <style type="text/css">
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            list-style: none;
+            font-family: 'poppins', sans-serif;
+        }
+
+        .main {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            text-align: center;
+        }
+
+        .menu {
+            width: 20%;
+            background-color: #121227;
+        }
+
+        #logo {
+            color: #fff;
+            font-size: 30px;
+            letter-spacing: 4px;
+            padding: 15px;
+            background-color: black;
+
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            letter-spacing: 2px;
+            display: list-item;
+            padding: 20px;
+            border-top: 1px solid #0093E9;
+            border-bottom: 1px solid #0093E9;
+        }
+
+        .menu a:hover {
+            background-color: rgb(255, 149, 0);
+            transition: 0.5s;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .sair {
+            
+            background-color: red;
+            transition: 0.5s;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .button {
+            
+            color: #0093E9;
+        }
+
+        .body{
+            background-color: #F8F8FF;
+        }
+        .cor
+        {
+            color: #0093E9;
+        }
+        -->
+
+   
+      footer {
+            text-align: center;
+            padding: 3px;
+            background-color: #121227;
+            color: white;
+          }
+    
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="menu fixed">
+            <h2 id="logo">OFICINA GEOVANE</h2>
+            <a href="#">home</a>
+            <a href="moto.html">perças de moto</a>
+            <a href="{% url 'progresso' %}">progresso</a>
+            <a href="#">booking</a>
+            <a href="#">news</a>
+            <a href="{% url 'percas_cadastrar' %}">cadastrar perças</a><br><br><br><br>
+            <button class="sair"><a href="#">SAIR</a> </button>
+        </div>
+        <div class="container-fluid">
+            <div class="body">
+                <h1 class="cor"></h1><br><br><br>
+                <div class="row mt-5">
+                    <div class="col-12 col-lg-6">
+                        <div class="card" style="width: 18rem;">
+                            <a href="{% url 'moto' %}"><img src="https://img.freepik.com/fotos-premium/cortada-perto-tiro-de-moto-bonita-e-personalizada-na-oficina_124865-594.jpg?w=2000"
+                                class="card-img-top" alt="moto"></a>
+                            <div class="card-body">
+                                <p class="card-text"> PERÇAS de MOTO </p>
+                            </div>
+                        </div>
+                    </div>
+                   
+
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+              <div class="col-12">
+                  <div class="card-body">
+                      <div class="progress">
+                          <div class="progress-bar" role="progressbar" aria-label="Example with label"
+                              style="width: 40%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">40%</div>
+                      </div>
+                  </div>
+
+                  <div class="row mt-5">
+                  <div class="card-body">
+                      <table class="table table-success table-striped">
+                          <tr>
+                              <th>perças</th>
+                              <th>codigo</th>
+                              <th>Estoque</th>
+                              <th>Status</th>
+                          </tr>
+                          <tr>
+                              <td>pastilhas de freios</td>
+                              <td>00001</td>
+                              <td>09</td>
+                              <td><a href="#" class="btn btn-success">Estoque<br></a></td>
+                          </tr>
+                          <tr>
+                              <td>velas de ignição</td>
+                              <td>203000</td>
+                              <td>50</td>
+                              <td><a href="#" class="btn btn-success">Estoque<br></a></td>
+                          </tr>
+                          <tr>
+                              <td>corrente</td>
+                              <td>12400</td>
+                              <td>50</td>
+                              <td><a href="#" class="btn btn-success">Estoque<br></a></td>
+                          </tr>
+                          <tr>
+                              <td>bateria</td>
+                              <td>23030</td>
+                              <td>4</td>
+                              <td><a href="#" class="btn btn-success">Estoque<br></a></td>
+                          </tr>
+      
+                          <tr>
+                              <td>Pneus</td>
+                              <td>330</td>
+                              <td>0</td>
+                              <td><a href="#" class="btn btn-danger">Em falta<br></a></td>
+                          </tr>
+                        </table>
+                      </div>
+
+                      <footer>
+                        <p class="text-center">OFICINAGEOVANE</p>
+                        <p class="text-center">SUPORTE TECNICO</p>
+                        <i class="bi bi-whatsapp">(84)998575-8685</i><br>
+                        <p class="text-center"><i class="bi bi-telephone-forward">SAC: 0800 654 2983</i></p>
+                      </footer>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

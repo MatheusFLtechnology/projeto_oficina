@@ -1,0 +1,155 @@
+{% extends 'base/base.html'%}
+
+
+{% block  estilo %}
+ <style type="text/css">
+
+
+ </style>
+
+
+{% endblock%}
+
+{% block conteudo%}
+
+    <div class="container-fluid">
+        <div class="row mt-5">
+            <div class="card"></div>
+            <div class="col-12">
+                <h1>Progresso do mês</h1>
+
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="card-body">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-label="Example with label"
+                            style="width: 40%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">40%</div>
+                    </div>
+                </div>
+
+                <div class="container overflow-hidden text-center">
+                    <div class="row mt-3 gx-5">
+                      <div class="col">
+                       <div class="p-3 border bg-light">historico de lucro
+                     
+                        <table class="table table-bordered border-primary">
+                            <thead>
+                              <tr>
+                                <th scope="col">ANO</th>
+                                <th scope="col">MÊS</th>
+                                <th scope="col">PERÇA</th>
+                                <th scope="col">LUCRO</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr class="table-danger">
+                                <th scope="row">2022</th>
+                                <td>MARÇO</td>
+                                <td>MOTO</td>
+                                <td>23%</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2022</th>
+                                <td>JUNHO</td>
+                                <td>MOTO</td>
+                                <td>24%</td>
+                              </tr>
+                              <tr class="table-success">
+                                <th scope="row">2022</th>
+                                <td>JULHO</td>
+                                <td>BIKE</td>
+                                <td>30%</td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+                       </div>
+                      </div>
+
+                <div class="container overflow-hidden text-center">
+                    <div class="row mt-4 gx-5">
+                        <div class="col">
+                            <div class="p-3 border bg-light">
+
+                                <p>Saida de Perças moto</p>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">TIPO</th>
+                                            <th scope="col">CÓDIGO</th>
+                                            <th scope="col">PREÇO</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>pastilhas de freios</td>
+                                            <td>00001</td>
+                                            <td>R$ 14,90</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>velas de ignição</td>
+                                            <td>203000</td>
+                                            <td>R$ 20,00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>corrente</td>
+                                            <td>12400</td>
+                                            <td>R$ 25,00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                        <div class="col">
+                            <div class="p-3 border bg-light">
+                                <p>perças cadastradas</p>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">TIPO</th>
+                                            <th scope="col">CÓDIGO</th>
+                                            <th scope="col">PREÇO</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>pastilhas de freios</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td colspan="2">Larry the Bird</td>
+                                            <td>@twitter</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
