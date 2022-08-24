@@ -1,6 +1,8 @@
+import imp
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms import percasForm
+from .models import percas
 # Create your views here.
 
 def home(request):
@@ -12,9 +14,9 @@ def moto(request):
 def progresso(request):
     return render(request, 'progresso.html',{'nome':'progresso'})
 def lista_percas(request):
-    percas = percas.object.all()
+    perca = percas.objects.all()
     contexto ={
-        'todas_percas': percas
+        'todas_percas': perca
     }
     return render(request, 'lista_percas.html', contexto)     
 def percas_cadastrar(request):

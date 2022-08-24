@@ -14,8 +14,8 @@
     <p><a href="{% url 'percas_cadastrar'%}">Cadastrar novo Curso</a></p>
     
     <p>Lista de Cursos Cadastrados</p>
-    {% for curso in lista_percas %}
-        
+    {% for percas in todas_percas %}
+    <p>{{percas.nome}} {{percas.descricao}}  {{percas.valor_compra}} {{percas.valor_venda}} |
         
     {% empty %}
     <p>Nenhuma perças cadastrado</p>
