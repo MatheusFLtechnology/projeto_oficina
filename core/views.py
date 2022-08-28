@@ -27,4 +27,26 @@ def percas_cadastrar(request):
     contexto ={
         'form_percas': form
     }
-    return render(request, 'percas_cadastrar.html',contexto)        
+    return render(request, 'percas_cadastrar.html',contexto) 
+
+def editar_percas(request, id):
+    perca = percas.objects.get(pk=id)
+
+    form = percasForm(request.POST or None, instance=perca)
+
+    if form.is_valid():
+        form.save()
+        return redirect('lista_percas')
+
+    contexto ={
+        'form_percas': form
+    }   
+    return render(request, 'percas_cadastrar.html',contexto)
+    
+def remover_percas(request, id):
+    perca = percas.objects.get(pk=id)
+    perca.delete()
+    return redirect('lista_percas')   
+
+
+

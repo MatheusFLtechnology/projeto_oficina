@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from core.views import home, adiministrador,lista_percas, lista_percas, moto, progresso, percas_cadastrar
+from core.views import home, adiministrador,lista_percas, lista_percas, moto, progresso, percas_cadastrar,editar_percas,remover_percas
 
 urlpatterns = [
     path('', home),
@@ -24,5 +24,7 @@ urlpatterns = [
     path('progresso/',progresso,name='progresso'),
     path('percas_cadastrar/', percas_cadastrar, name='percas_cadastrar'),
     path('lista_percas/', lista_percas, name='lista_percas'),
+    path('percas_editar/<int:id>/', editar_percas, name='editar_percas'),
+    path('percas_remover/<int:id>/', remover_percas, name='remover_percas'),
     path('admin/', admin.site.urls),
 ]

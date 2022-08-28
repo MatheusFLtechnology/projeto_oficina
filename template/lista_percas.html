@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,20 +6,140 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <style type="text/css">
+         * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            list-style: none;
+            font-family: 'poppins', sans-serif;
+        }
+
+        .main {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            text-align: center;
+        }
+
+        .menu {
+            width: 20%;
+            background-color: #121227;
+        }
+
+        #logo {
+            color: #fff;
+            font-size: 30px;
+            letter-spacing: 4px;
+            padding: 15px;
+            background-color: black;
+
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            letter-spacing: 2px;
+            display: list-item;
+            padding: 20px;
+            border-top: 1px solid #0093E9;
+            border-bottom: 1px solid #0093E9;
+        }
+
+        .menu a:hover {
+            background-color: rgb(255, 149, 0);
+            transition: 0.5s;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .sair {
+            
+            background-color: red;
+            transition: 0.5s;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+        .table
+        {
+            color: aqua;
+        }
+
+        .card_body
+        {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            list-style: none;
+            font-family: 'poppins', sans-serif;
+        }
+
+        .tabela{
+            background-color: #66CDAA;
+            border: 2px;
+            width: 100%;
+            margin-left: 50px;
+        }
+
+    </style>
+
 </head>
 <body>
-    <h1>perças cadastradas</h1>
 
-    <h1>Cursos</h1>
+    <div class="main">
+        <div class="menu fixed">
+            <h2 id="logo">OFICINA GEOVANE</h2>
+            <a href="#">home</a>
+            <a href="moto.html">perças de moto</a>
+            <a href="{% url 'progresso' %}">progresso</a>
+            <a href="{% url 'lista_percas' %}">estoque</a>
+            <a href="#">news</a>
+            <a href="{% url 'percas_cadastrar' %}">cadastrar peças</a><br><br><br><br>
+            <button class="sair"><a href="#">SAIR</a> </button>
+        </div>
 
-    <p><a href="{% url 'percas_cadastrar'%}">Cadastrar novo Curso</a></p>
+     <div class="row mt-2">
+        <div class="col-12">
+        <a href="{% url 'percas_cadastrar'%}">Cadastrar novas peças</a><br><br><br>
+       </div>
+    </div>
     
-    <p>Lista de Cursos Cadastrados</p>
+    <p>Lista de peças Cadastrados</p>
     {% for percas in todas_percas %}
-    <p>{{percas.nome}} {{percas.descricao}}  {{percas.valor_compra}} {{percas.valor_venda}} |
-        
+    <div class="row mt-5">
+    <div class="card">
+    <div class="card-body">
+    <table class="tabela">    
+    <tr>
+       <th>Nome:</th> <br> 
+       <th>Descrição:</th>
+       <th>valor comprado:</th>
+      <th>valor venda:</th>
+    
+    </tr> 
+    <tr>
+        <td>{{percas.nome}}</td>
+        <td>{{percas.descricao}}
+        <td>{{percas.valor_compra}}</td>
+        <td>{{percas.valor_venda}}</td>
+        <td> <a href="{% url 'editar_percas' percas.id %}">EDITAR</a></td>
+        <td><a href="{% url 'remover_percas' percas.id %}">REMOVER</a></td>
+    </tr> 
+</table> 
+</div>
+</div>
     {% empty %}
     <p>Nenhuma perças cadastrado</p>
+    
+    </div>
+    </div>
     {% endfor %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+            crossorigin="anonymous"></script>
 </body>
 </html>

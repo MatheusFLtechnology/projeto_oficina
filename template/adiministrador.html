@@ -101,7 +101,7 @@
             <a href="#">home</a>
             <a href="moto.html">perças de moto</a>
             <a href="{% url 'progresso' %}">progresso</a>
-            <a href="#">booking</a>
+            <a href="{% url 'lista_percas' %}">estoque</a>
             <a href="#">news</a>
             <a href="{% url 'percas_cadastrar' %}">cadastrar peças</a><br><br><br><br>
             <button class="sair"><a href="#">SAIR</a> </button>
@@ -135,6 +135,7 @@
 
                   <div class="row mt-5">
                   <div class="card-body">
+                    
                       <table class="table table-success table-striped">
                           <tr>
                               <th>perças</th>
