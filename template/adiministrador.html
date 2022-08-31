@@ -99,11 +99,12 @@
         <div class="menu fixed">
             <h2 id="logo">OFICINA GEOVANE</h2>
             <a href="#">home</a>
-            <a href="moto.html">perças de moto</a>
+            <a href="{% url 'cadastrar_funcionario' %}">cadastrar funcionarios</a>
             <a href="{% url 'progresso' %}">progresso</a>
             <a href="{% url 'lista_percas' %}">estoque</a>
-            <a href="#">news</a>
-            <a href="{% url 'percas_cadastrar' %}">cadastrar peças</a><br><br><br><br>
+            <a href="{% url 'lista_funcionarios' %}">funcionario cadastrado</a>
+            <a href="{% url 'admin' %}">perfil</a>
+            <a href="{% url 'percas_cadastrar' %}">cadastrar peças</a>
             <button class="sair"><a href="#">SAIR</a> </button>
         </div>
         <div class="container-fluid">
@@ -189,5 +190,4 @@
             integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
             crossorigin="anonymous"></script>
 </body>
-
 </html>

@@ -1,8 +1,8 @@
 import imp
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .forms import percasForm
-from .models import percas
+from .forms import percasForm, funcionariosForm
+from .models import percas, funcionarios
 # Create your views here.
 
 def home(request):
@@ -47,6 +47,38 @@ def remover_percas(request, id):
     perca = percas.objects.get(pk=id)
     perca.delete()
     return redirect('lista_percas')   
+def adimin(request):
+    return render(request, 'admin.html',{'nome':'admin'})
+def lista_funcionarios(request):
+    funcionario = funcionarios.objects.all()
+    contexto={
+        'todos_funcionarios': funcionario
+    }
+    return render(request, 'funcionarios.html',contexto)    
+def cadastrar_funcionario(request):
+    form = funcionariosForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return redirect('lista_funcionarios')
+    contexto={
+        'form_funcionarios':form
+    }
+    return render(request,'funcionario_cadastrar.html', contexto)
+def editar_funcionario(request, id):
+    funcionario = funcionarios.objects.get(pk=id)
+    form=funcionariosForm(request.POST or None, instance=funcionario)
+    if form.is_valid():
+        form.save()
+        return redirect('lista_funcionarios')
+    contexto={
+        'form_funcionarios': form
+    }    
+    return render(request, 'funcionario_cadastrar.html',contexto)
+def remover_funcionario(request, id):
+    funcionario = funcionarios.objects.get(pk=id)
+    funcionario.delete()
+    return redirect('lista_funcionarios')         
+
 
 
 

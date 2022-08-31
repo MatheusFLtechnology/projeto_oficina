@@ -1,4 +1,3 @@
-{% load widget_tweaks %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -7,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+ 
     <style type="text/css">
-
-
-* {
+        * {
             padding: 0px;
             margin: 0px;
             box-sizing: border-box;
@@ -73,47 +71,39 @@
         .body{
             background-color: #F8F8FF;
         }
-        
-     
-        
-        
-        
+        .cor
+        {
+            color: #0093E9;
+        }
 
     </style>
 
 </head>
 <body>
-    <h1 style="text-align: center ;"> Cadastrar peças</h1>
-
+    
     <div class="main">
         <div class="menu fixed">
             <h2 id="logo">OFICINA GEOVANE</h2>
-            <a href="#">home</a>
-            <a href="moto.html">perças de moto</a>
-            <a href="{% url 'progresso' %}">progresso</a>
-            <a href="{% url 'lista_percas' %}">estoque</a>
-            <a href="#">news</a>
-            <a href="{% url 'percas_cadastrar' %}">cadastrar peças</a><br><br><br><br>
+            <a href="{% url 'adiministrador' %}">home</a>
+            <a href="#">mudar senha senha</a><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
             <button class="sair"><a href="#">SAIR</a> </button>
         </div>
-        
-       <div class="container-fluid">
-        <div class="row mt-5">
-            <div class="col-12">
-        <form class="text-center" method="post" >
-            {% csrf_token %}    
-            {{form.nome}}{% render_field form_percas.nome placeholder='nome' class="cor" %}
-            {{form.descricao}}{% render_field form_percas.descrcao placeholder='Descrição' class="cor" %}
-            {{form.valor_compra}}{% render_field form_percas.valor_compra placeholder='valor da compra ' class="cor" %}
-            {{form.valor_venda}}{% render_field form_percas.valor_venda placeholder='valor da venda' class="cor" %}
-            <p><input type="submit" value="Cadastrar" >
-        </form>
-    </div>
-    </div>
-    </div>
-   
+ 
+        <div class="row mt-4">
+            <div class="col-12 col-lg-4">
+              <p class="text-center"><img
+                  src="https://s3-sa-east-1.amazonaws.com/projetos-artes/fullsize%2F2012%2F07%2F18%2F11%2FWDL-Logo-16863_9211_051010524_1934912352.jpg"
+                  class="img-fluid rounded-circle" width="20%" alt="jaqueta"></p>
+              <h4 class="text-center">OFICNA GEOVANE</h4>
+              
+              
+              </div>
+            </div>
+
+        </div>
+     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-    crossorigin="anonymous"></script>
+            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+            crossorigin="anonymous"></script>
 </body>
 </html>
