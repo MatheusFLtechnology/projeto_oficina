@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from core.views import editar_funcionario, home, adiministrador,lista_percas, lista_percas, moto, progresso, percas_cadastrar,editar_percas, remover_funcionario,remover_percas, adimin,lista_funcionarios,cadastrar_funcionario, editar_funcionario, remover_funcionario
+from django.contrib.auth.views import LoginView, LogoutView
+from core.views import editar_funcionario, home, adiministrador,lista_percas, lista_percas, moto, progresso, percas_cadastrar,editar_percas, remover_funcionario,remover_percas, adimin,lista_funcionarios,cadastrar_funcionario, editar_funcionario, remover_funcionario,perfil
 
 urlpatterns = [
     path('', home),
@@ -31,5 +32,8 @@ urlpatterns = [
     path('percas_remover/<int:id>/', remover_percas, name='remover_percas'),
     path('funcionario_editar/<int:id>/', editar_funcionario, name='editar_funcionario'),
     path('funcionario_remover/<int:id>/', remover_funcionario, name='remover_funcionario'),
+    path('perfil/', perfil, name='perfil'),
+    path('login/',LoginView.as_view(),name='login'),
+    path('logout/',LogoutView.as_view(),name='logout'),
     path('admin/', admin.site.urls),
 ]

@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms import percasForm, funcionariosForm
 from .models import percas, funcionarios
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 def home(request):
@@ -77,7 +78,10 @@ def editar_funcionario(request, id):
 def remover_funcionario(request, id):
     funcionario = funcionarios.objects.get(pk=id)
     funcionario.delete()
-    return redirect('lista_funcionarios')         
+    return redirect('lista_funcionarios') 
+@login_required    
+def perfil(request):
+    return render(request, 'perfil.html')            
 
 
 

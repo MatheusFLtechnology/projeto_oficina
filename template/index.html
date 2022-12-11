@@ -1,128 +1,16 @@
-{% extends 'base/base.html'%}
-{% block conteudo%}
-
-{% block  estilo %}
-    <style type="text/css">
-
-* {
-      margin: 0;
-      padding: 0;
-    }
-
-    
-    .center {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .main {
-      width: 100%;
-      height: 100vh;
-      background-color: black;
-      background-image: linear-gradient(160deg, black, #80D0C7 100%);
-    }
-
-    .login {
-      width: 350px;
-      height: 400px;
-      background: white;
-      flex-direction: column;
-      position: relative;
-      box-shadow: 0px 0px 50px rgba(0, 0, 0, 0, 301);
-    }
-
-    .user {
-      width: 75px;
-      height: 75px;
-      background: white;
-      font-size: 2.5rem;
-      border-radius: 50%;
-      margin-bottom: 50px;
-      background-color: #0093E9;
-      background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-    }
-
-    .fa-envelope,
-    .fa-key {
-      font-size: 1.8rem;
-      color: rgb(77, 77 77);
-    }
-
-    input {
-      width: 250px;
-      height: 30px;
-      border: none;
-      border-bottom: 2px solid #000;
-      outline: none;
-      margin-left: 10px;
-      padding-left: 5px;
-      font-size: 1rem;
-    }
-
-    .email,
-    .senha {
-      margin-bottom: 20px;
-
-    }
-
-    .btn {
-      width: 150px;
-      height: 40px;
-      font-size: 1.1rem;
-      outline: none;
-      border: none;
-      cursor: pointer;
-      margin-top: 10px;
-      background-color: #0093E9;
-      background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-      color: white;
-
-    }
-
-    .rodape {
-      background-color: black;
-      color: white;
-    }
-
-
-    footer {
-      position: absolute;
-      bottom: 0;
-      background-color: #1000e9 0%, #80a4d0 100%;
-      color: rgb(255, 255, 255);
-      width: 100%;
-      height: 100px;
-      text-align: center;
-      line-height: 100px;
-    }
-
-    </style>
-
-{% endblock%}
-
-<div class="container-fluid">
-
-    <form>
-      <div class="main center">
-        <div class="login center">
-          <div class="user center">
-            <i class="far fa-user"></i>
-          </div>
-          <div class="email center">
-            <i class="fas fa-envelope"></i>
-            <input type="email" class="" placeholder="Digite o E-mail" />
-          </div>
-          <div class="senha center">
-            <i class="fas-key"></i>
-            <input type="password" name="senha" id="senha" placeholder="digite sua senha">
-          </div>
-          <button class="btn"><a href="{% url 'adiministrador' %}"> Acessar</a></button>
-        </div>
-      </div>
-    </form>
-  </div><br><br><br><br><br><br><br><br>
-
-
-
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>Página de Login</h2>
+  <div><a href="{% url 'login' %}">LOGIN</a></div>
+  <div><a href="{% url 'perfil' %}">Perfil</a></div>
+  
+  </form>
+</body>
+</html>
