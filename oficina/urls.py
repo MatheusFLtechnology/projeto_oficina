@@ -19,7 +19,7 @@ from django.contrib.auth.views import LoginView, LogoutView
 from core.views import editar_funcionario, home, adiministrador,lista_percas, lista_percas, moto, progresso, percas_cadastrar,editar_percas, remover_funcionario,remover_percas, adimin,lista_funcionarios,cadastrar_funcionario, editar_funcionario, remover_funcionario,perfil
 
 urlpatterns = [
-    path('', home),
+    path('', home, name='home'),
     path('adiministrador/',adiministrador,name='adiministrador'),
     path('adimin/',adimin,name='admin'),
     path('moto/',moto,name='moto'),
